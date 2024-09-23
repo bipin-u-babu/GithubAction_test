@@ -1,0 +1,23 @@
+name: Multi_Event
+
+on: 
+  push: 
+     branches: 
+         - main
+  pull_request: 
+     branches: 
+         - main
+
+jobs: 
+  helloWorld:
+     runs-on: ubuntu-latest
+     steps: 
+       - name: "Echo basic info"
+         run: | 
+           echo   "jobId: $GITHUB_JOB"
+           echo   "action: $GITHUB_ACTION"
+
+         
+            
+
+             
