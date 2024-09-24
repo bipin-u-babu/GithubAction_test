@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Identify trigger
-      run: echo "Triggered by custom webhook with event type: ${{ github.event.action }}"
+      run: echo "Triggered by custom webhook with event type" # Use action here
 
     - name: Additional steps
       run: echo "You can add more steps based on the event type"
