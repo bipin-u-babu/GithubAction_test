@@ -1,0 +1,15 @@
+name: Workflow for Push and Webhook
+
+on:
+  repository_dispatch:
+    types: [custom-webhook]
+
+jobs:
+  webhook-job:
+    runs-on: ubuntu-latest
+
+    - name: Identify trigger
+      run: echo "Triggered by custom webhook with event type: ${{ github.event.action }}"
+
+    - name: Additional steps
+      run: echo "You can add more steps based on the event type"
