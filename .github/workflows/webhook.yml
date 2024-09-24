@@ -7,7 +7,7 @@ on:
 jobs:
   webhook-job:
     runs-on: ubuntu-latest
-
+    steps:
     - name: Identify trigger
       run: echo "Triggered by custom webhook with event type: ${{ github.event.action }}"
 
